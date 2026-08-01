@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #ffd700;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: #0a0a0a;
+  color: #f2f2f2;
+}
+
+html[data-theme="light"] body {
+  background: #f3f3f3;
+  color: #111;
+}
+
+html[data-theme="light"] .bg-\[\#0A0A0A\] {
+  background: #f3f3f3 !important;
+}
+
+html[data-theme="light"] .text-zinc-100,
+html[data-theme="light"] .text-zinc-200,
+html[data-theme="light"] .text-zinc-300,
+html[data-theme="light"] .text-zinc-400 {
+  color: #222 !important;
+}
+
+html[data-theme="light"] .bg-black\/30,
+html[data-theme="light"] .bg-black\/25,
+html[data-theme="light"] .bg-black\/40 {
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
+  color: #111;
+}
+
+button,
+input,
+select,
+textarea {
+  outline: none;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 50%, transparent);
+}
